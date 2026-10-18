@@ -139,12 +139,31 @@ dvc push
 
 Les identifiants sont stockés dans `.dvc/config.local`, qui n'est pas versionné.
 
+## Mise en ligne
+
+Le dépôt local utilise deux remotes Git :
+
+- `origin` : le fork personnel `https://github.com/alexmckme/examen-dvc.git` ;
+- `upstream` : le dépôt d'origine `https://github.com/DataScientest-Studio/examen-dvc.git`.
+
+Après avoir créé le fork sur GitHub :
+
+```bash
+git push -u origin master
+```
+
+Puis créer le dépôt DagsHub `alexmckme/examen-dvc` à partir de ce dépôt GitHub
+et suivre la section « Stockage distant DagsHub ».
+
 ## Rendu
 
 - Partager le dépôt DagsHub avec `https://dagshub.com/licence.pedago` en
   collaborateur avec droits de lecture.
 - Envoyer sur la plateforme un `.zip` contenant un `.md` avec nom, prénom,
   adresse e-mail et lien vers le dépôt DagsHub.
+  Le fichier `rendu_examen.md` (et son archive `rendu_examen.zip`) sert de base :
+  il suffit de compléter les champs manquants et de régénérer l'archive avec
+  `zip -j rendu_examen.zip rendu_examen.md`.
 
 Checklist du dépôt :
 
